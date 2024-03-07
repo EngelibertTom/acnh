@@ -25,6 +25,35 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "packagerOpts": {
+      "config": "metro.config.js",
+      "sourceExts": ["js", "jsx", "ts", "tsx", "json", "mjs", "cjs"],
+      "nodeModulesPath": "node_modules"
+    },
+    "plugins": [
+      "expo-font"
+    ],
+    "hooks": {
+      "postPublish": [
+        {
+          "file": "sentry-expo/upload-sourcemaps",
+          "config": {
+            "organization": "your-organization",
+            "project": "your-project",
+            "authToken": "your-auth-token"
+          }
+        }
+      ]
+    },
+    "extra": {
+      "expo": {
+        "fonts": [
+          {
+            "asset": "assets/fonts/FOT-RodinBokutoh Pro EB.otf"
+          }
+        ]
+      }
     }
   }
 }
