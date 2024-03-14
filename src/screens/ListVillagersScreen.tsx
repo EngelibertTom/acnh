@@ -82,7 +82,11 @@ export function ListVillagersScreen({ navigation }) {
                 />
                 <View style={styles.filterButtons}>
                     {['Cat', 'Dog', 'Bird', 'Bear'].map(species => renderSpeciesButton(species))}
-                    <Pressable  style={styles.filterOptions} onPress={resetFilter}> <Text style={styles.txtButton}> Tout </Text></Pressable>
+                    <Pressable style={styles.filterOptions} onPress={resetFilter}>
+                        <Text style={styles.txtButton}>
+                            Tout
+                        </Text>
+                    </Pressable>
                 </View>
             </ImageBackground>
         </View>
