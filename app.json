@@ -15,20 +15,30 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.iome.acnh"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.iome.acnh"
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
     "packagerOpts": {
       "config": "metro.config.js",
-      "sourceExts": ["js", "jsx", "ts", "tsx", "json", "mjs", "cjs"],
+      "sourceExts": [
+        "js",
+        "jsx",
+        "ts",
+        "tsx",
+        "json",
+        "mjs",
+        "cjs"
+      ],
       "nodeModulesPath": "node_modules"
     },
     "plugins": [
@@ -53,7 +63,16 @@
             "asset": "assets/fonts/FOT-RodinBokutoh Pro EB.otf"
           }
         ]
+      },
+      "eas": {
+        "projectId": "8f87a414-9b08-4a13-abc6-1832be295331"
       }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/8f87a414-9b08-4a13-abc6-1832be295331"
     }
   }
 }
